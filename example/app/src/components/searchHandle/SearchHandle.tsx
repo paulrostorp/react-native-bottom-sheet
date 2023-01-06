@@ -5,10 +5,12 @@ import {
   Dimensions,
   NativeSyntheticEvent,
   TextInputChangeEventData,
+  Keyboard,
 } from 'react-native';
 import {
   BottomSheetTextInput,
   BottomSheetHandleProps,
+  useBottomSheet,
 } from '@gorhom/bottom-sheet';
 import { useShowcaseTheme } from '@gorhom/showcase-template';
 
@@ -26,7 +28,7 @@ const SearchHandleComponent = ({
 }: SearchHandleProps) => {
   // state
   const [value, setValue] = useState(initialValue);
-
+  const { close } = useBottomSheet();
   // hooks
   const { colors } = useShowcaseTheme();
 
@@ -55,6 +57,10 @@ const SearchHandleComponent = ({
         placeholderTextColor={colors.secondaryText}
         placeholder="Search for a place or address"
         onChange={handleInputChange}
+        onSubmitEditing={() => {
+          Keyboard.dismiss();
+          close();
+        }}
       />
     </View>
   );
