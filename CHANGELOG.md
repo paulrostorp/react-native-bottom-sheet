@@ -1,6 +1,12 @@
 ## Changelog
 
-### [v4.4.6](https://github.com/paulrostorp/react-native-bottom-sheet/compare/v4.4.5...v4.4.6) - 
+### [v4.4.7](https://github.com/paulrostorp/react-native-bottom-sheet/compare/v4.4.6...v4.4.7) - 
+
+#### Fixes
+
+- allow custom  on modal ([`64024f2`](https://github.com/paulrostorp/react-native-bottom-sheet/commit/64024f26bd367ef47c15faef86d6bbd25a7a09fa))
+
+### [v4.4.6](https://github.com/paulrostorp/react-native-bottom-sheet/compare/v4.4.5...v4.4.6) -  6 January 2023 
 
 #### Fixes
 
